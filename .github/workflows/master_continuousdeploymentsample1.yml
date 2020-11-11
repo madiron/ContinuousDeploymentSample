@@ -23,9 +23,6 @@ jobs:
     - name: Build with dotnet
       run: dotnet build --configuration Release
 
-    - name Test with dotnet
-      run: dotnet test ContinuousDeploymentSample.Tests
-
     - name: dotnet publish
       run: dotnet publish ContinuousDeploymentSample.WebApi -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
